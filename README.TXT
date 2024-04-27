@@ -79,3 +79,15 @@ John Carmack
 
 Copyright (c) ZeniMax Media Inc.
 Licensed under the GNU General Public License 2.0.
+
+
+---
+
+sudo dnf install libXext-devel libnsl2-devel libX11-devel xorg-x11-server-Xephyr
+
+cd linuxdoom-1.10
+mkdir linux
+cp ~/'.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Ultimate Doom/base/DOOM.WAD' doomu.wad
+
+Xephyr :2 -ac -br -screen 320x200x8 -reset -terminate -title DOOM
+DISPLAY=:2 ./linux/linuxxdoom
